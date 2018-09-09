@@ -1,0 +1,37 @@
+tei-head{
+    color: red;
+    text-align: center
+
+} /*comment: alle überschriften in rot und zentriert*/
+tei-expan{
+    color: brown
+} /*comment: alle expan-elemente in braun */
+tei-expan:before{
+    content: "[" !important
+}
+tei-expan:after{
+    content: "]" !important
+} /*comment: alle expan-elemente in eckigen klammern angezeigt. hinzufügung mit important: dadurch andere mögliche bestimmungen überschrieben, die evtl. durch das allgemeine css kommen*/
+tei-persName{
+    color: black;
+    text-decoration: underline
+}
+tei-hi[rend = "latin"]{
+    font-size: 300%
+} /*comment: alle hi-elemente, die rend-attribut haben*/
+tei-hi[rend = "align(center)"]{
+    font-size: 300%;
+    float: left;
+    line-height: 1em;
+    padding-right: 10px;
+}
+
+tei-subst > tei-del{
+    display: none;
+    text-decoration: line-through;
+} /*comment: do not display del elements*/
+
+tei-subst > tei-add{
+    color: pink;
+    cursor: pointer;
+} /*comment: display all add in yellow and add a pointer* und in html-datei wird dann hinzugefügt, dass an diesen stellen bei anklicken der inhalt von del erscheinen soll */ 
